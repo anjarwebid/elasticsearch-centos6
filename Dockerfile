@@ -9,7 +9,7 @@ FROM centos:centos6
 MAINTAINER "Anjar Fiandrianto" <info@anjar.web.id>
 
 #Install basic packages
-RUN yum -y install wget
+RUN yum -y install wget which nano
 
 #Install Java
 RUN yum -y install java-1.7.0-openjdk-devel.x86_64
