@@ -14,7 +14,7 @@ RUN yum -y install wget which nano
 #Install Java
 RUN yum -y install java-1.7.0-openjdk-devel.x86_64
 
-#seeting environtment
+#seting environtment
 ENV JAVA_OPTS="-Xms256m -Xmx512m"
 ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk.x86_64
 ENV PATH $JAVA_HOME/bin:$PATH
@@ -26,7 +26,7 @@ RUN yum -y localinstall https://download.elasticsearch.org/elasticsearch/elastic
 VOLUME ["/data"]
 
 # Mount elasticsearch.yml config
-#ADD config/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
+ADD config/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 
 # Define working directory.
 WORKDIR /data
