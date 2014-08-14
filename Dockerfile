@@ -1,7 +1,7 @@
 #
 # ElasticSearch Dockerfile
 #
-# https://github.com/anjarwebid/elasticsearch-centos
+# https://github.com/anjarwebid/elasticsearch-centos6
 #
 
 # Pull base image.
@@ -30,12 +30,16 @@ ADD config/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 # Define working directory.
 WORKDIR /data
 
+# Add scripts
+ADD run.sh /tmp/run.sh
+RUN chmod +x /tmp/run.sh
+
 # Define default command.
-CMD ["/usr/share/elasticsearch/bin/elasticsearch -Des.default.path.conf=/etc/elasticsearch"]
+ENTRYPOINT ["/tmp/run.sh"]
+CMD [""]
 
 # Expose ports.
 #   - 9200: HTTP
 #   - 9300: transport
 EXPOSE 9200
 EXPOSE 9300
-
