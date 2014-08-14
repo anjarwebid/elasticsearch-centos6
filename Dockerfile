@@ -15,7 +15,6 @@ RUN yum -y install wget which nano
 RUN yum -y install java-1.7.0-openjdk-devel.x86_64
 
 #seting environtment
-ENV JAVA_OPTS="-Xms256m -Xmx512m"
 ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk.x86_64
 ENV PATH $JAVA_HOME/bin:$PATH
 
