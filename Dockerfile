@@ -40,5 +40,7 @@ CMD ["/tmp/run.sh"]
 # Expose ports.
 #   - 9200: HTTP
 #   - 9300: transport
+#	- 54328: zen discover
 EXPOSE 9200
 EXPOSE 9300
+EXPOSE 54328
