@@ -32,7 +32,7 @@ ADD config/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 WORKDIR /data
 
 # Define default command.
-CMD ["/etc/init.d/elasticsearch start"]
+CMD ["/usr/share/elasticsearch/bin/elasticsearch -Des.default.path.conf=/etc/elasticsearch"]
 
 # Expose ports.
 #   - 9200: HTTP
