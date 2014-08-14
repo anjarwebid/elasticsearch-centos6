@@ -10,7 +10,7 @@ centos:centos6
 	docker pull anjarwebid/elasticsearch-centos6
 
 ### Usage
-    docker run -d -p 9200:9200 -p 9300:9300 anjarwebid/elasticsearch-centos6
+    docker run -d -p 9200:9200 -p 9300:9300 -p 54328:54328 anjarwebid/elasticsearch-centos6
     
 ### Cluster configuration
 This dockerfile include elasticsearch.yml, for create custom cluster please change some values in elasticsearch.yml file.
