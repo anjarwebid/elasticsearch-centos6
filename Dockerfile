@@ -35,7 +35,7 @@ ADD run.sh /tmp/run.sh
 RUN chmod +x /tmp/run.sh
 
 # Define default command.
-CMD ["/tmp/run.sh"]
+CMD ["/tmp/run.sh && /bin/bash"]
 
 # Expose ports.
 #   - 9200: HTTP
